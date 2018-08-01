@@ -1,20 +1,43 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<header>
+    <div class="logo">
+        <div><span style="font-size: 23px">МАКЛЕР</span><span style="font-size: 15px">ОНЛАЙН</span></div>
+        <div><span style="font-size: 9px;margin-left: 25px">ГРУППА КОМПАНИЙ ZAVRUS</span></div>
+    </div>
+    <div class="menu">
+        <ul>
+            <li><div class="menuBlock" (click)="selected($event)" routerLink="login" routerLinkActive="active">ВОЙТИ</div></li>
+            <li><div class="menuBlock" (click)="selected($event)">ОПЛАТА</div></li>
+            <li><div class="menuBlock" (click)="selected($event)">О НАС</div></li>
+            <li><div class="menuBlock" (click)="selected($event)">ИЗБРАННОЕ</div></li>
+            <li><div class="menuBlock" (click)="selected($event)">ЗАЯВКИ</div></li>
+            <li><div class="menuBlock" (click)="selected($event)"  [routerLink]="['objects', true, false, true]" routerLinkActive="active">ОБЪЕКТЫ</div></li>
+            <li><div class="menuBlock" (click)="selected($event)"  routerLink="" routerLinkActive="active">ГЛАВНАЯ</div></li>
+        </ul>
+    </div>
+</header>
+<div class="uselessLine"></div>
+<router-outlet></router-outlet>
+
+<div id="menuMobile" class="menuMobile" [class.open]="mobileMenuActive">
+    <ul>
+        <li><div class="mobileBlock" (click)="mobileMenuActive = !mobileMenuActive" routerLink="" routerLinkActive="active">ГЛАВНАЯ</div></li>
+        <li><div class="mobileBlock" (click)="mobileMenuActive = !mobileMenuActive" [routerLink]="['objects', true, false, false]" routerLinkActive="active">ОБЪЕКТЫ</div></li>
+        <li><div class="mobileBlock" (click)="mobileMenuActive = !mobileMenuActive">ЗАЯВКИ</div></li>
+        <li><div class="mobileBlock" (click)="mobileMenuActive = !mobileMenuActive">ИЗБРАННОЕ</div></li>
+        <li><div class="mobileBlock" (click)="mobileMenuActive = !mobileMenuActive">О НАС</div></li>
+        <li><div class="mobileBlock" (click)="mobileMenuActive = !mobileMenuActive">ОПЛАТА</div></li>
+        <li><div class="mobileBlock" (click)="mobileMenuActive = !mobileMenuActive">ВОЙТИ</div></li>
+    </ul>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="mobileTopMenu">
+    <div class="button1"  [routerLink]="['../objects', true, false, false]" routerLinkActive="active" (click)="mobileMenuActive = false">СПИСОК</div>
+    <div class="hideMenu" (click)="mobileMenuActive = !mobileMenuActive">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+    <div class="button2" [routerLink]="['../objects', false, true, true]" routerLinkActive="active"  (click)="mobileMenuActive = false">ФИЛЬТРЫ</div>
+</div>
+
 

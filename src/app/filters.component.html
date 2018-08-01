@@ -1,0 +1,92 @@
+<div class="filters-inner">
+    <div class="mobile">
+    <span style="margin:20px 0 20px 0;font-family: Cadillac, sans-serif;
+    letter-spacing: 0.05em;">Настройте критерии поиска</span>
+    <div class="block">
+        <span class="type">НАСЕЛЕННЫЙ ПУНКТ</span>
+        <div class="button-box">
+            <input type="button" class="button city" value="{{city}}" style="margin: 0">
+        </div>
+    </div>
+    <div class="block">
+        <span class="type">ТИП ПРЕДЛОЖЕНИЯ</span>
+        <div class="button-box">
+            <input type="button" class="button offer" (click)="selected($event, 'offer')" value="БЕЗ КОМИССИИ" style="margin: 0">
+            <input type="button" class="button offer add" (click)="selected($event, 'offer')" value="С КОМИССИЕЙ">
+            <input type="button" class="button offer add" (click)="selected($event, 'offer')" value="ВСЕ">
+        </div>
+    </div>
+    <div class="block">
+        <span class="type">ТИП ОБЪЕКТА</span>
+        <div class="button-box">
+            <input type="button" class="button typeOfObject" (click)="selected($event, 'typeOfObject')" value="КОМНАТА" style="margin: 0">
+            <input type="button" class="button typeOfObject add" (click)="selected($event, 'typeOfObject')" value="КВАРТИРА">
+            <input type="button" class="button typeOfObject special add" (click)="selected($event, 'typeOfObject')" value="ДОМ/КОТТЕДЖ/ДАЧА">
+        </div>
+    </div>
+    <div class="block">
+        <span class="type">КОЛИЧЕСТВО КОМНАТ</span>
+        <div class="button-box">
+            <input type="button" class="button countOfRooms" (click)="selected($event, 'countOfRooms')" value="1 КОМН." style="margin: 0">
+            <input type="button" class="button countOfRooms add" (click)="selected($event, 'countOfRooms')" value="2 КОМН.">
+            <input type="button" class="button countOfRooms add" (click)="selected($event, 'countOfRooms')" value="3 КОМН.">
+            <input type="button" class="button countOfRooms add" (click)="selected($event, 'countOfRooms')" value="4 КОМН. +">
+        </div>
+    </div>
+    <div class="block">
+        <span class="type">СТОИМОСТЬ ДО...</span>
+        <div class="button-box">
+            <input type="button" class="button cost" (click)="selected($event, 'cost')" value="10000" style="margin: 0">
+            <input type="button" class="button cost add" (click)="selected($event, 'cost')" value="20000">
+            <input type="button" class="button cost add" (click)="selected($event, 'cost')" value="30000">
+            <input type="button" class="button cost add" (click)="selected($event, 'cost')" value="40000+">
+        </div>
+    </div>
+    <div class="block">
+        <span class="type">СОРТИРОВАТЬ ПО...</span>
+        <div class="button-box">
+            <input type="button" class="button sort" (click)="selected($event, 'sort')" value="ДАТЕ ДОБАВЛЕНИЯ" style="margin: 0">
+            <input type="button" class="button sort plus add" (click)="selected($event, 'sort')" value="СТОИМОСТИ">
+            <input type="button" class="button sort plus add" (click)="selected($event, 'sort')" value="РЕЙТИНГУ">
+        </div>
+    </div>
+    <div class="block" *ngIf="width < 600">
+        <span class="type">ОПРЕДЕЛИТЬ ЛОКАЦИЮ ДЛЯ ПОИСКА ОБЪЕКТА</span>
+        <div class="button-box">
+            <input type="button" class="button map" value="ПЕРЕЙТИ К КАРТЕ">
+            <p class="map-text">Для определения локации поиска объекта воспользуйтесь картой</p>
+        </div>
+    </div>
+    <div class="button-box">
+        <input type="button" class="button clear" value="ОЧИСТИТЬ ФИЛЬТРЫ" (click)="clear()" style="margin-bottom: 25px">
+    </div>
+</div>
+    <div class="additional">
+        <span style="width: 100%;text-align: center">ДОПОЛНИТЕЛЬНЫЕ ВОЗМОЖНОСТИ</span>
+    </div>
+    <div class="add-button">
+        <span style="flex: 0 0 calc(90% - 30px);padding-left: 30px;">ОФОРМИТЬ РАССЫЛКУ</span>
+        <img src="../assets/plus.png" style="float: right" (click)="openNews = !openNews">
+    </div>
+    <div class="additional-block" [class.open]="openNews">
+        <p class="add-text">Уютная двушка с отличным ремонтом в 150 метрах от м. Молодежная. Полностью оборудована мебелью и техникой, всё в отличном состоянии.</p>
+        <input type="text" value="Введите ваш e-mail" class="email">
+        <input type="button" value="Подписаться" class="news-button">
+    </div>
+    <div class="add-button">
+        <span style="flex: 0 0 calc(90% - 30px);padding-left: 30px;">ВАШ ПЕРСОНАЛЬНЫЙ МЕНЕДЖЕР</span>
+        <img src="../assets/plus.png" style="float: right" (click)="manager = !manager">
+    </div>
+    <div class="additional-block"  [class.open]="manager">
+        <p class="add-text">​Заказывая эту услугу,вы нанимаете персонального менеджера, который найдет нужные вам варианты,договорится  о просмотре объектов в удобное Вам время, и проконтролирует юридическую чистоту заключения договора найма жилья.Также Вы получите отчет о проделанной работе на Вашу почту и в личный кабинет сайта.</p>
+        <input type="button" value="Заказать" class="news-button">
+    </div>
+    <div class="add-button">
+        <span style="flex: 0 0 calc(90% - 30px);padding-left: 30px;">НАНЯТЬ ПРОФЕССИОНАЛЬНОГО РИЭЛТОРА</span>
+        <img src="../assets/plus.png" style="float: right" (click)="realtor =! realtor">
+    </div>
+    <div class="additional-block"  [class.open]="realtor">
+        <p class="add-text">Нанять риэлтора с хорошим рейтингом.</p>
+        <input type="button" value="НАНЯТЬ" class="news-button">
+    </div>
+</div>

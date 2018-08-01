@@ -1,0 +1,299 @@
+.filters-inner{
+    padding-top: 30px;
+    font-family: Cadillac, sans-serif;
+    letter-spacing: 0.05em;
+    font-size: 12px;
+    color: #595959;
+    background-color: white;
+}
+.mobile{
+    padding-left: 40px;
+}
+.filters-inner-additional{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 100%;
+}
+.block{
+    height: 60px;
+    margin-bottom: 25px;
+}
+.type{
+    margin-bottom: 5px;
+}
+.button{
+    -webkit-appearance: none;
+    border-radius: 0;
+    font-family: Cadillac, sans-serif;
+    letter-spacing: 0.05em;
+    outline: none;
+    background-color: white;
+    border: 1px solid #5e5e5e;
+    width: 88px;
+    height: 40px;
+    font-size: 11px;
+    color: #5e5e5e;
+    transition: 0.2s;
+}
+.add-button{
+    background-color: #ced0d1;
+    font-size: 16px;
+    font-family: Cadillac, sans-serif;
+    letter-spacing: 0.05em;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    color: #5e5e5e;
+    border-bottom: 1px solid #a2a0a0;
+}
+.button.add{
+    border-left: none;
+}
+.button:hover{
+    background-color: #dbdbdb;
+}
+.button.offer, .button.sort, .button.typeOfObject{
+    width: 120px;
+}
+.button.city{
+    width: 350px;
+}
+.button-box{
+    display: flex;
+    width: 350px;
+    margin-top: 10px;
+}
+.button.clear{
+    width: 350px;
+    border: none;
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+.button.typeOfObject.special{
+    width: 170px;
+}
+.map-text{
+    font-family: Cadillac, sans-serif;
+    letter-spacing: 0.05em;
+    margin: 0 0 0 20px;
+    width: 190px;
+}
+.additional{
+    display: flex;
+    font-family: Cadillac, sans-serif;
+    letter-spacing: 0.05em;
+    font-size: 16px;
+    color: #5E5E5E;
+    margin-bottom: 25px;
+}
+.additional-block{
+    font-family: Cadillac, sans-serif;
+    letter-spacing: 0.05em;
+    font-size: 12px;
+    padding: 20px 30px;
+    display: none;
+    flex-direction: column;
+    animation:fade ease-in 0.3s;
+    transition: .3s;
+}
+.additional-block.open{
+    display: flex;
+    -webkit-animation:fade ease-in 0.3s;
+    animation:fade ease-in 0.3s;
+    transition: .3s;
+}
+@-webkit-keyframes fade {
+    from { transform: scaleY(0); }
+    to { transform: scaleY(1); }
+}
+@keyframes fade {
+    from { transform: translate(0, 20%);
+        opacity: 0;}
+    to { transform: translate(0, 0);
+        opacity: 1;}
+}
+.add-text{
+    font-size: 12px;
+    width: 350px;
+    color: #5E5E5E;
+    padding-bottom: 10px;
+}
+.email{
+    -webkit-appearance: none;
+    border-radius: 0;
+    padding: 0;
+    font-family: Cadillac, cursive;
+    letter-spacing: 0.05em;
+    font-size: 12px;
+    background-color: white;
+    color: #5E5E5E;
+    border: 1px solid #c0c0c0;
+    outline: none;
+    margin-right: 10px;
+    width: 385px;
+    height: 40px;
+    margin-bottom: 10px;
+    text-align: center;
+    transition: 0.4s;
+}
+.news-button{
+    -webkit-appearance: none;
+    border-radius: 0;
+    font-family: Cadillac, sans-serif;
+    letter-spacing: 0.05em;
+    font-size: 12px;
+    background-color: white;
+    color: #5E5E5E;
+    outline: none;
+    border: 1px solid #c0c0c0;
+    width: 385px;
+    height: 40px;
+    margin-bottom: 10px;
+    transition: 0.4s;
+}
+.news-button:hover{
+    background-color: #202b2f;
+    color: white;
+}
+.realtor{
+    font-family: Cadillac, sans-serif;
+    letter-spacing: 0.05em;
+    font-size: 10px;
+    color: #989898;
+    width: 190px;
+    padding-left: 160px;
+}
+.button.map{
+    width: 128px;
+    margin: 0;
+}
+
+@media all and (max-width: 1200px) {
+    .filters-inner{
+        padding-left: 20px;
+    }
+    .news-button.buy{
+        width: 325px;
+    }
+}
+@media all and (max-width: 1000px){
+    .filters-inner{
+        height: 100%;
+        padding-left: 0;
+    }
+    .button{
+        width: 69px;
+    }
+    .button-box{
+        width: 295px;
+    }
+    .button.city, .button.clear{
+        width: 290px;
+    }
+    .button.offer{
+        width: 93px;
+        padding: 0;
+    }
+    .button.sort{
+        width: 105px;
+        padding-left: 3px;
+    }
+    .button.sort.plus{
+        width: 88px;
+        padding: 0;
+    }
+    .button.typeOfObject{
+        width: 66px;
+        padding: 0;
+    }
+    .button.typeOfObject.special{
+        width: 147px;
+    }
+    .map-text{
+        width: 180px;
+    }
+    .filters-inner-additional{
+        padding-bottom: 60px;
+    }
+    .button.map{
+        width: 110px;
+    }
+    .additional-block{
+        padding: 15px 0 15px 20px;
+    }
+    .add-text{
+        width: 260px;
+    }
+    .email{
+        width: 200px;
+    }
+    .news-button{
+        width: 100px;
+    }
+    .news-button.buy{
+        width: 310px;
+    }
+    .realtor{
+        padding-left: 80px;
+    }
+}
+@media all and (max-width: 450px){
+    .mobile{
+        padding-left: 25px;
+    }
+    .button{
+        width: 74px;
+    }
+    .button.city, .button.clear{
+        width: 314px;
+    }
+    .button.offer{
+        width: 101px;
+    }
+    .button.typeOfObject{
+        width: 76px;
+    }
+    .button.typeOfObject.special{
+        width: 150px;
+    }
+    .map-text{
+        font-size: 11px;
+        margin-left: 10px;
+        width: 170px;
+    }
+    .button.sort{
+        width: 120px;
+    }
+    .button.sort.plus{
+        width: 90px;
+    }
+    .filters-inner{
+        height: auto;
+    }
+    .filters-inner span, .filters-inner .button-box{
+        width: 290px;
+    }
+    .news-button.buy{
+        width: calc(100vw - 40px);
+    }
+    .email{
+        width: calc(100vw - 160px);
+    }
+    .realtor{
+        padding-left: 130px;
+    }
+    .add-text{
+        width: 320px;
+    }
+    .additional{
+        width: 100%;
+    }
+    .additional-block{
+        padding: 30px 20px 30px 20px;
+        width: calc(100vw - 25px);
+    }
+    .arrow.right{
+        right: 37px;
+    }
+}

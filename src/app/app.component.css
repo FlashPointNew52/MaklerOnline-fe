@@ -1,0 +1,336 @@
+header{
+    width: 100%;
+    height: 130px;
+    background-color: white;
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 0px;
+}
+.logo{
+    flex: 0 0 20%;
+    margin-left: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Helvetica, sans-serif;
+}
+.active{
+    outline: none;
+}
+.menu{
+    flex: 0 0 calc(80% - 17px);
+}
+.menu.open{
+    display: block;
+    height: max-content;
+    margin: 66px 0 0 0;
+    min-height: calc(100vh - 17px);
+    padding: 0;
+    flex: none;
+}
+.menuBlock{
+    font-family: Cadillac, sans-serif;
+    letter-spacing: 0.05em;
+    font-size: 14px;
+    width: 90px;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: right;
+}
+.menuBlock:hover{
+    background-color: #d2d2d2;
+    transition: 0.4s;
+}
+.main{
+    display: flex;
+    height: max-content;
+    width: 100%;
+    min-height: calc(100vh - 195px);
+    background: url("../assets/background.jpg") center;
+}
+.main.open{
+    min-height: calc(100vh - 203px);
+    background: none;
+}
+.countLine{
+    height: 214px;
+    width: 100vw;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+#num1, #num2, #num3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#num1, #num3{
+    flex: 0 0 35%;
+}
+#num2{
+    flex: 0 0 30%;
+}
+.bar1, .bar2, .bar3{
+    width: 45px;
+    height: 6px;
+    background-color: #e6e7e8;
+    margin: 3px 0;
+    transition: 0.4s;
+    border-radius: 2px;
+}
+.menuMobile{
+    min-height: calc(100vh - 60px);
+    display: none;
+    flex-direction: column;
+    max-width: 220px;
+    background-color: rgba(94,94,94,0.8);
+    font-family: Cadillac, sans-serif;
+    letter-spacing: 0.05em;
+    font-size: 14px;
+    color: white;
+    position: absolute;
+}
+.mobileBlock{
+    font-size: 18px;
+    width: 220px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menuMobile.open{
+    display: block;
+    position: fixed;
+    left: 0;
+}
+.mobileTopMenu{
+    position: fixed;
+    width: 100vw;
+    background-color: #5e5e5e;
+    display: none;
+    color: white;
+    left: 0px;
+    bottom: 0px;
+    height: 60px;
+}
+.uselessLine{
+    height: 65px;
+    width: 100%;
+    background-color: #4b4b4b;
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 130px;
+}
+.button1, .button2{
+    flex: 0 0 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Cadillac, sans-serif;
+    letter-spacing: 0.05em;
+    font-size: 14px;
+}
+.hideMenu{
+    flex: 0 0 20%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logoTitle1{
+    font-size: 26px;
+    margin-top: 100px;
+}
+.logoTitle2{
+    font-size: 12px;
+    margin-top: 10px;
+}
+.logoTitle3{
+    font-size: 32px;
+    margin-top: 100px;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    color: #404040;
+}
+.map{
+    display: none;
+}
+.map-inner{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    height: calc(100vh - 176px);
+    width: calc(100vw - 450px);
+    min-height: calc(100vh - 203px);
+}
+.map.open{
+    display: block;
+    background-color: white;
+    position: fixed;
+    top: 195px;
+}
+.filters{
+    display: none;
+    height: max-content;
+    min-height: calc(100vh - 201px);
+    width: 450px;
+}
+.scroll-items{
+    display: none;
+    padding: 5px 5px 0 5px;
+}
+.scroll-items.open{
+    display: flex;
+    flex-direction: column;
+    background-color: #5E5E5E;
+    overflow-y: scroll;
+    height: calc(100% - 60px);
+}
+.filters.open{
+    display: flex;
+    flex-direction: column;
+    background-color: #5E5E5E;
+    position: fixed;
+    right: 0;
+    top: 195px;
+}
+.countLine.close{
+    display: none;
+}
+app-filters-box{
+    display: none;
+}
+app-filters-box.open{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    overflow: scroll;
+    height: calc(100% - 65px);
+}
+
+.filters-menu-desktop{
+    height: 65px;
+    float: right;
+    width: 450px;
+    background-color: #5e5e5e;
+    display: flex;
+    color: white;
+}
+.filters-menu-desktop .button1, .filters-menu-desktop .button2{
+    flex: 0 0 50%;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+a{
+    text-decoration: none;
+}
+@media all and (min-width: 1100px){
+    .menu ul{
+        margin: 0 100px 0 0;
+    }
+    .main{
+        background-size: 100vw calc(100vh - 185px);
+    }
+}
+@media all and (min-width: 1000px){
+    .button1, .button2, .hideMenu{
+        display: none;
+    }
+    .mobileTopMenu{
+        height: 65px;
+    }
+    .main .logoTitle1,.main .logoTitle2,.main .logoTitle3{
+        display: none;
+    }
+    .menuMobile{
+        display: none;
+    }
+    .menuMobile.open{
+        display: none;
+    }
+    .filters-menu-desktop{
+        display: flex;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        width: 450px;
+    }
+    .filters-menu-desktop .button1, .filters-menu-desktop .button2{
+        display: flex;
+    }
+}
+@media all and (max-height: 600px) {
+    .menuMobile.open .mobileBlock{
+        max-height: 50px;
+    }
+}
+
+@media all and (max-width: 1000px){
+    .map{
+        display: none;
+    }
+    .mobileTopMenu{
+        display: flex;
+    }
+    .uselessLine{
+        display: none;
+    }
+    header, .countLine{
+        display: none;
+    }
+    .menu{
+        display: none;
+        position: absolute;
+    }
+    .main{
+        min-height: calc(100vh - 60px);
+        background-position-x: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-size: 300vw 100vh;
+    }
+    .main.mobile-open{
+        background-color: #5E5E5E;
+        padding-bottom: 60px;
+    }
+    .map.mobile-open .map-inner{
+        width: 100vw;
+        height: 100vh;
+    }
+    .filters.mobile-open{
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+    }
+    .filters-menu-desktop{
+        display: none;
+    }
+    .scroll-items.open{
+        padding: 0;
+        min-height: calc(100vh - 60px);
+    }
+    .menuMobile{
+        padding-top: 40px;
+    }
+}
+@media all and (max-width: 400px){
+    .logoTitle1{
+        margin-top: 50px;
+    }
+    .logoTitle3{
+        font-size: 24px;
+        margin-top: 90px;
+    }
+}

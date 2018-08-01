@@ -1,0 +1,21 @@
+<div class="filters-menu-desktop">
+    <div class="button1" [routerLink]="['../objects', true, false, true]" routerLinkActive="active"><a>СПИСОК</a></div>
+    <div class="linehr"></div>
+    <div class="button2" [routerLink]="['../objects', false, true, true]" routerLinkActive="active"><a>ФИЛЬТРЫ</a></div>
+</div>
+<div class="main">
+    <div style="display: flex">
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16
+9316.54631581446!2d134.97334583897464!3d48.46475950516245!2m3
+!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5efae9c6b0368ac9%3A0xfa
+97bc0e5fba7f50!2z0KXQsNCx0LDRgNC-0LLRgdC6LCDQpdCw0LHQsNGA0L7Q
+stGB0LrQuNC5INC60YDQsNC5!5e0!3m2!1sru!2sru!4v1530008713402" class="inner-mobile-map"></iframe>
+        </div>
+        <div class="filters">
+            <div class="external">
+                <app-item *ngFor="let obj of watched"  [item] = "obj.object" [mode]="obj.mode"></app-item>
+            </div> <!-- внешний  -->
+        </div>
+    </div>
+</div>
