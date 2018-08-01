@@ -158,8 +158,8 @@ import { ActivatedRoute } from '@angular/router';
                                 <div class="arrow left" (click)="prev()"><img src="../assets/arrowl.png"></div>
                                 <div class="objects">
                                     <ul id="carousel-ul">
-                                        <li class="carousel-li" *ngFor="let obj of items, let i = index"  [routerLink]="['/catalog-item', obj]"  routerLinkActive="active"><app-item class="app"  [item] = "obj" [mode]="'middle'"
-                                        >
+                                        <li class="carousel-li" *ngFor="let obj of items, let i = index"  [routerLink]="['/catalog-item', obj]"  routerLinkActive="active">
+                                            <app-item class="app"  [item] = "obj" [mode]="'middle'">
                                         </app-item></li>
                                     </ul>
                                 </div>
