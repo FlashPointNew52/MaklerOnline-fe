@@ -7,7 +7,9 @@ import {Item} from './item';
     template: `
         <div class="breadcrumbs">
             <div *ngFor="let crumb of breadcrumbs; let i = index" class="crumb" (click)="showObj(crumb);selected($event)">
-                <div class="inner-crumb">ул. <span style="margin-right: 5px;margin-left: 3px;text-transform: uppercase">{{crumb.address}}</span><span style="margin-right: 10px">{{crumb.house_num}}</span></div>
+                <div class="inner-crumb">ул. <span style="margin-right: 5px;margin-left: 3px;text-transform: uppercase">{{crumb.address}}</span>
+                    <span style="margin-right: 10px">{{crumb.house_num}}</span>
+                </div>
                 <div style="width: 16px; height: 16px;"><img class="del" (click)="clear(i)" src="../assets/cross.png" width="15px" height="15px"/></div>
             </div>
         </div>
