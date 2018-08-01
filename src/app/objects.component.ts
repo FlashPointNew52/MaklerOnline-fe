@@ -340,9 +340,9 @@ export class ObjectsComponent implements OnInit {
         this.items.push(new Item('Станционная', '13', 17000, 2, 4, 5, 33));
     }
     selected(el: MouseEvent) {
-        let items =  document.getElementsByClassName('inner-crumb')  as HTMLCollectionOf<HTMLElement>;
+        let items = (<HTMLElement>el.currentTarget).parentElement.children;
         for (let i = 0; i < items.length; i++) {
-            items.item(i).style.removeProperty('border-bottom');
+            (<HTMLElement>items.item(i).firstChild).style.removeProperty('border-bottom');
         }
         (<HTMLElement>el.currentTarget).style.setProperty('border-bottom', '1px #fdfdfd solid');
     }
